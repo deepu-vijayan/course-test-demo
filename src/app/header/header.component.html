@@ -1,0 +1,39 @@
+
+  <mat-toolbar color="primary" fxLayoutAlign="space-between center">
+    <div fxLayout="row">
+    <button mat-flat-button color="primary" (click)="toggleMenuHandler()" *ngIf="mediaXs">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="logo">Some Courses</span>
+    <div *ngIf="!mediaXs">
+      <button mat-flat-button color="primary">
+        Home
+      </button>
+      <button mat-flat-button color="primary">
+        Contact Us
+      </button>
+      <button mat-flat-button color="primary">
+        About Us
+      </button>
+    </div>
+  </div>
+  <div >
+    <button mat-flat-button color="primary" >
+      <mat-icon *ngIf="mediaXs">more_vert</mat-icon>
+      <span *ngIf="!mediaXs">Menu</span>
+    </button>
+  </div>
+  </mat-toolbar>
+  <mat-toolbar color="primary" fxLayoutAlign="space-between center" *ngIf="mediaXs">
+
+      <button mat-flat-button color="primary">
+        Home
+      </button>
+      <button mat-flat-button color="primary">
+        Contact Us
+      </button>
+      <button mat-flat-button color="primary">
+        About Us
+      </button>
+
+  </mat-toolbar>

@@ -1,0 +1,66 @@
+<div fxLayoutAlign="left">
+  <h1>Add Course</h1>
+</div>
+<form [formGroup]="courseForm">
+  <div
+    fxLayoutAlign="space-between center"
+    fxLayoutAlign.lt-sm="space-between left"
+    fxLayout="row"
+    fxLayout.lt-sm="column"
+  >
+    <p fxFlex="50" fxFlex.lt-sm="100">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter Name" formControlName="name" />
+      </mat-form-field>
+    </p>
+    <p fxFlex="50" fxFlex.lt-sm="100">
+      <mat-form-field appearance="outline">
+        <mat-label>Author Name</mat-label>
+        <input
+          matInput
+          placeholder="Enter Author Name"
+          formControlName="authorName"
+        />
+      </mat-form-field>
+    </p>
+  </div>
+  <div
+    fxLayoutAlign="space-between center"
+    fxLayoutAlign.lt-sm="space-between left"
+    fxLayout="row"
+    fxLayout.lt-sm="column"
+  >
+    <p fxFlex="50" fxFlex.lt-sm="100">
+      <mat-form-field appearance="outline">
+        <mat-label>Contact</mat-label>
+        <input matInput placeholder="Enter Contact" formControlName="contact" />
+      </mat-form-field>
+    </p>
+    <p fxFlex="50" fxFlex.lt-sm="100">
+      <mat-form-field appearance="outline">
+        <mat-label>No Of Chapters</mat-label>
+        <input
+          matInput
+          placeholder="Enter No Of Chapters"
+          formControlName="noOfChapters"
+        />
+      </mat-form-field>
+    </p>
+  </div>
+  <div fxLayoutAlign="space-between center">
+    <div fxFlex="50" [fxHide.lt-sm]></div>
+    <div fxFlex="50" fxFlex.lt-sm="100" fxLayoutAlign="space-around center">
+      <button mat-raised-button color="primary" (click)="saveCourseHandle()">
+        Save
+      </button>
+      <button
+        mat-raised-button
+        color="secondary"
+        (click)="cancelCourseHandle()"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>

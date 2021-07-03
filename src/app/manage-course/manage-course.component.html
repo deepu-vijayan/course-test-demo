@@ -1,0 +1,25 @@
+<div class="padding-5" fxLayoutAlign="space-between center">
+  <h1>Manage Course</h1>
+  <button  mat-raised-button color="primary" (click)="addCourseHandle()">
+    <mat-icon>add</mat-icon>
+    Add Course</button>
+</div>
+<mat-accordion>
+  <ng-container *ngFor = "let course of courses">
+  <mat-expansion-panel class="mat-expansion-panel">
+    <mat-expansion-panel-header>
+      <mat-panel-title class="mat-panel-title">
+      {{course.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{course.authorName}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="expansion-panel-content" fxLayoutAlign="space-between left">
+      <p>Published on: {{course.createpublishedDated}}</p>
+      <p>Number of Chapters: {{course.noOfChapters}}</p>
+    </div>
+  </mat-expansion-panel>
+</ng-container>
+
+</mat-accordion>
